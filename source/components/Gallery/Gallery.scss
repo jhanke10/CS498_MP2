@@ -1,0 +1,23 @@
+.Gallery {
+  background: blue;
+  margin-top: 2%;
+  color: white;
+  h1 {
+    padding-top: 2%;
+    padding-left: 2%;
+  }
+  .filter {
+    margin-bottom: 5%;
+    margin-left: 2%;
+  }
+  .galleryLink {
+    margin: 2%;
+    img {
+      width: 10%;
+      margin-bottom: 5%;
+    }
+    img:hover{
+      opacity: 0.2;
+    }
+  }
+}

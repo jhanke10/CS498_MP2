@@ -1,0 +1,82 @@
+$color1: gray;
+$color2: lightgray;
+
+@mixin adjust1($top, $left, $x) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translateX($x);
+}
+
+@mixin adjust2($top, $left, $x) {
+  margin-top: $top;
+  margin-left: $left;
+  transform: translateX($x);
+}
+
+.List {
+  width: 100%;
+  height: 100%;
+  .Search {
+    @include adjust1(15%, 50%, -50%);
+    width: 40%;
+    height: 30%;
+    background: $color1;
+    #search_label {
+      margin-top: 2%;
+    }
+    .search_bar {
+      width: 80%;
+      @include adjust2(-5%, 50%, -50%);
+    }
+    p {
+      width: 80%;
+      @include adjust2(2%, 50%, -50%);
+    }
+    .sort_menu {
+      width: 80%;
+      @include adjust2(-5%, 10%, 0%);
+    }
+    .sort_order {
+      padding-top: 3%;
+      padding-left: 10%;
+    }
+  }
+}
+
+.Found {
+  width: 40%;
+  @include adjust1(45%, 50%, -50%);
+}
+
+.Movie {
+  width: 100%;
+  height: 150px;
+  border: 1px solid black;
+  background: $color2;
+  img {
+    width: 20%;
+    height: 90%;
+    margin: 1.5%;
+    float: left;
+  }
+  .movie_info {
+    color: black;
+    width: 100%;
+    height: 90%;
+    h1 {
+      @include adjust2(2%, 25%, 0%);
+      text-align: left;
+      width: 70%;
+      font-size: 150%;
+    }
+    p {
+      @include adjust2(-2%, 25%, 0%);
+      font-size: 100%;
+    }
+  }
+}
+
+.Movie:hover {
+  background: white;
+}
